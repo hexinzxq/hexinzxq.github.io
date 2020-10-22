@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 检验一个手机号的合法性
+        // 第一位必须是1  ^1
+        // 第二位是3-9的任意数  [3-9]
+        // 第三位起每位都是0-9的随机数  [0-9]{9}$
+        var phonenum = prompt("请输入一个手机号：");
+        var phone = /^1[3-9][0-9]{9}$/;
+        if(phone.test(phonenum)){
+            alert ("这是一个手机号");
+        }else{
+            alert("这不是一个手机号！");
+        }
+       
+    </script>
+</head>
+<body>  
+</body>
+</html>

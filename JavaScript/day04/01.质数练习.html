@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 定义一个计时器测试性能
+        console.time("time");
+        // 输入一个数判断是否为质数
+        while (true) {
+            var num = prompt("请输入一个数字：");
+            if (num > 0) {
+                break;
+            }
+            alert("请输入一个有效的整数！");
+        }
+        var flag = true;
+        for(var i=2;i<num;i++ ){
+            if(num%i==0){
+                // 说明num不是质数
+                flag=false;
+            }
+        }
+        // 如果是质数则输出
+        if(flag){
+            alert(num+"是质数");
+        }else{
+            alert("这个数不是质数！");
+        }
+        // 计时结束
+        console.timeEnd("time");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

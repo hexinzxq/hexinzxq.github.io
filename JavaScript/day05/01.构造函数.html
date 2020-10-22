@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <script>
+        function Person(name,age,gender){
+            this.name = name;
+            this.age =age;
+            this.gender = gender;  
+        }
+        // 原型对象创建，优点各种好，详情见笔记
+        Person.prototype.sayName =  function fun(){
+            document.write(this.name+"<br>");
+        }
+        // 重写toString方法以使得打印出数据
+        Person.prototype.toString = function(){
+            return "Person[name = "+this.name+",age="+this.age+",gender="+this.gender+"]";
+        }
+        var per5 = new Person(1,1,1);
+        document.write(per5);
+
+        function Dog(name,age,weight){
+            this.name = name;
+            this.age = age;
+            this.weight = weight;
+            document.write("这狗名为"+name+","+"它今年"+age+"岁"+"重量为"+weight+"kg"+"<br>");
+        }
+
+        // Dog.prototype.Jiao =  function(){
+        //         document.write("嗷嗷嗷~~~~~");
+        //     }
+        var person = new Person("孙悟空",20,"男");
+        document.write(person);
+
+    
+        // var p1 = new Person("猪",13,"女");
+
+        // var p2 = new Person(1,2,3);
+
+        // var dog1 = new Dog("多多",12,34);
+
+        // var dog2 = new Dog("乖乖",8,8);
+        // var dog2 = new Dog("乖乖",8,8);
+        // var dog2 = new Dog("乖乖",8,8);
+
+        // dog1.Jiao();
+
+        
+
+        // person.sayName();
+        // p1.sayName();
+        // document.write(p1 instanceof Person)
+        // document.write(p2 instanceof Person)
+        // document.write(person instanceof Person)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

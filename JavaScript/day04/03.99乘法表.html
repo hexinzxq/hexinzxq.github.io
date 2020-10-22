@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function sheet(){
+                for(var i=1 ; i<=9 ; i++){
+            for(var j=1 ; j<=i; j++){
+                document.write("<span>"+j+"*"+i+"="+j*i+"&nbsp;&nbsp;&nbsp;&nbsp;"+"</span>");
+            }
+            document.write("<br><br>")
+        }
+        alert("确定显示九九乘法表？此操作不可逆(反正你也取消不了啦啦啦)");
+            }       
+    </script>
+</head>
+<body>
+    <button onclick="sheet();">九九乘法表显示</button>
+    
+</body>
+</html>

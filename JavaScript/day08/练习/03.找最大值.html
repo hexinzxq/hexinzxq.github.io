@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>找最大值</title>
+    <script>
+        // 5. 随机生成10-20间的十个整数打印在控制台，并找出最大值。
+        // 设置一个数组保存生成的十个数字
+        var arr = [];
+        // 设置一个生成a-b随机数的函数
+        function randomNum(a, b){
+            var t = b-a;
+            var num = Math.floor(Math.random()*t+a);
+            return num;
+        }
+        // 遍历打印十个数10-20之间
+        for(var i=0;i<10;i++){
+            var num1 = randomNum(10,20);
+            arr.push(randomNum(10,20));
+            console.log(num1);
+        }
+        arr.sort(function(a,b){
+            return a-b;
+        });
+        var max = arr.pop();
+        console.log("最大值："+max);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function creatPerson(name,gender,age){
+            var obj = new Object();
+            obj.name=name;
+            obj.gender=gender;
+            obj.age=age;
+            obj.sayName=function sayName(){
+                console.log(obj.name);
+            }
+            return obj;
+        }
+
+       var obj1 =  creatPerson("猪头","女",18);
+       var obj2 =  creatPerson("ewq","nan",23);
+       console.log(obj1.sayName);
+       console.log(obj2.sayName());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

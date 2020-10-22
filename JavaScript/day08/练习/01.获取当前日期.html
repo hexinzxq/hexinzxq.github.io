@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取日期</title>
+    <script>
+        // 4. 获取当前日期，并以‘xxxx-xx-xx’的格式打印。
+       function getDate(){
+           var newDate = new Date();
+           newDay = newDate.getDate(),
+           newMonth = newDate.getMonth()+1,
+           newYear = newDate.getFullYear(),
+           Dates = '';
+           if(newMonth>=1 && newMonth<=9){
+            newMonth = "0" + newMonth;
+           }
+           if(newDay>=1 && newDay<=9){
+            newDate = "0" + newDate;
+           }
+           return Dates = newYear+'-'+newMonth+'-'+newDay;
+       }
+       console.log(getDate());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

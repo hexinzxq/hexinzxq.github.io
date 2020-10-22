@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机数排序</title>
+    <script>
+        // 1. 用js实现随机选取10–100之间的10个数字，存入一个数组，并排序
+        // 创建一个数组用来保存十个数字
+        var arr = [];
+        // 定义一个获取10-100随机数的函数
+        function getNum(a,b){
+            var x = b-a;
+            var num = Math.floor( Math.random()*x+a);
+            return num;
+        }
+
+        // 生成一个遍历十次数生成十个随机数的方法
+        for(var i=0 ; i<10 ; i++){
+            // 将产生的十个数放到之前的数组中
+            // var num = getNum(10,100);
+            arr.push(getNum(10,100));
+        }
+        // 数组数数字排序
+        for(var j=0 ; j<arr.length ; j++){
+            for(var y=j+1; y<arr.length ; y++){
+                if(arr[j]>arr[y]){
+                    var t = arr[j];
+                    arr[j] = arr[y];
+                    arr[y] = t;
+
+                }
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

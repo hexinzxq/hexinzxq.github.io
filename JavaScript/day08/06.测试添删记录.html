@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除记录</title>
+    <style>
+        table {
+            border: rgb(150, 62, 62) solid;
+            border-collapse: collapse;
+            text-align: center;
+            margin: 0 auto;
+            width: 600px;
+            height: 300px;
+        }
+
+        td {
+            border: rgb(150, 62, 62) solid;
+        }
+
+        td a {
+            text-decoration: none;
+            color: red;
+            border: solid azure 1px;
+            background-color: azure;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            // 为“删除”这个超链接设置点击事件以达到删除该列数据
+            // 为所有的超链接设置一个点击事件
+            // 获取所有的超链接
+            var allA = document.getElementsByTagName("a");
+            // 遍历所有a
+            for (var i = 0; i < allA.length; i++) {
+                // 为所有的超链接设置一个点击事件
+                allA[i].onclick = function () {
+                    // alert("hello");
+                    // 找到tr,然后实现删除tr
+                    var tr = this.parentNode.parentNode;
+                    var name = tr.getElementsByTagName("td")[0].innerHTML;
+                    var flag = confirm("确定删除"+name+"吗？");
+                    if (flag) {
+                        //    点击事件发生后，删除该行tr
+                        tr.parentNode.removeChild(tr);
+                    }
+                    return false;
+                };
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>姓名</td>
+                <td>联系电话</td>
+                <td>邮箱</td>
+                <td>薪资</td>
+                <td id="a"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="name">花儿</td>
+                <td id="phone">15431289765</td>
+                <td id="email">10897654320@qq.com</td>
+                <td id="salary">34574</td>
+                <td id="a"><a href="">删除</a></td>
+            </tr>
+            <tr>
+                <td id="name">彩娃</td>
+                <td id="phone">15431289765</td>
+                <td id="email">10897654321@qq.com</td>
+                <td id="salary">34574</td>
+                <td id="a"><a href="">删除</a></td>
+            </tr>
+            <tr>
+                <td id="name">水儿</td>
+                <td id="phone">15431289765</td>
+                <td id="email">10897654320@qq.com</td>
+                <td id="salary">34574</td>
+                <td id="a"><a href="">删除</a></td>
+            </tr>
+            <tr>
+                <td id="name">酒儿</td>
+                <td id="phone">15431289765</td>
+                <td id="email">10897654320@qq.com</td>
+                <td id="salary">34574</td>
+                <td id="a"><a href="">删除</a></td>
+            </tr>
+            <tr>
+                <td id="name">前儿</td>
+                <td id="phone">15431289765</td>
+                <td id="email">10897654320@qq.com</td>
+                <td id="salary">34574</td>
+                <td id="a"><a href="">删除</a></td>
+            </tr>
+            <tr>
+                <td id="name">端儿</td>
+                <td id="phone">15431289765</td>
+                <td id="email">10897654320@qq.com</td>
+                <td id="salary">34574</td>
+                <td id="a"><a href="">删除</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>

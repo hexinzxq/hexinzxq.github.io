@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 6. 判断一个字符串是否为回文字符串，“abba”是回文串，“abcd”不是回文串，将判断结果打印在控制台上。 -->
+    <script>
+        function isPaliString(str) {
+            var arr = new Array();
+            arr = str.split("");
+            // console.log(oldArr);
+            var reArr = arr.reverse();
+            var reStr = reArr.join("");
+            if (reStr === str) {
+                console.log(str + "是回文串")
+            } else {
+                console.log(str + "不是回文串")
+            }
+        }
+        isPaliString("abbbbbabbaa");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

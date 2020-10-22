@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格样式修改</title>
+    <link rel="stylesheet" href="../重置样式表/reset.css">
+    <script>
+        /* 3. 点击按钮，将奇数列的li背景色设置为红色，偶数列li
+        背景色设置为绿色
+         */
+        window.onload = function () {
+            // 获取按钮
+            var btn01 = document.getElementById("btn01");
+            // 获取所有li
+            var allLi = document.getElementsByTagName("li");
+            // 设置按钮单击响应的事件
+            btn01.onclick = function () {
+                // 遍历所有li
+            for (var i = 0; i < allLi.length; i++) {
+                // 判断是偶数列的话颜色变绿，奇数列颜色变红
+                allLi[i].style.backgroundColor=i%2==0?"red":"green";
+            }
+            } ;
+        };
+    </script>
+    <style>
+        .box {
+            width: 500px;
+            height: 400px;
+            background-color: rgb(204, 164, 164);
+            text-align: center;
+            margin: 100px auto;
+        }
+
+        button {
+            width: 300px;
+            height: 40px;
+            border-radius: 50px;
+            outline: none;
+            margin-top: 20px;
+        }
+
+        ul {
+            margin-top: 20px;
+            margin-left: 100px;
+            border-radius: 50px;
+        }
+
+        li {
+            width: 300px;
+            line-height: 30px;
+            background-color: rgb(216, 116, 116);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <button id="btn01">点击按钮修改列表风格</button>
+        <ul id="ul">
+            <li>我是第1行li</li>
+            <li>我是第2行li</li>
+            <li>我是第3行li</li>
+            <li>我是第4行li</li>
+            <li>我是第5行li</li>
+            <li>我是第6行li</li>
+            <li>我是第7行li</li>
+            <li>我是第8行li</li>
+            <li>我是第9行li</li>
+            <li>我是第10行li</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

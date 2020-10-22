@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+        }
+
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            left: 0;
+            top:300px;
+        }
+    </style>
+    <script src="./js/tools.js"></script>
+    <script>
+        window.onload = function () {
+            var box1 = document.getElementById("box1");
+            var btn01 = document.getElementById("btn01");
+            var btn02 = document.getElementById("btn02");
+            var btn03 = document.getElementById("btn03");
+            var btn04 = document.getElementById("btn04");
+
+
+            // 点击按钮以后，使box1向右移动（left值增大）
+            btn01.onclick = function () {
+                move(box1,"left", 500, 10);
+
+            };
+
+            // 点击按钮以后，使box2向左移动（left值减小）
+            btn02.onclick = function () {
+                move(box1,"left", 0, 10);
+            };
+
+            // 点击按钮以后box2向右移动
+            btn03.onclick = function () {
+                move(box2,"left", 500, 10);
+            };
+
+            btn04.onclick = function () {
+                move(box2,"width", 500, 10, function(){
+                    // alert("动画执行完了~~~");
+                    move(box2,"height",500,10,function(){
+                        move(box2,"left",500,10,function(){
+                            // alert("这次完了~~~");
+                        })
+                    })
+                });
+            };
+        };
+
+
+
+        // 定义一个变量用来保存定时器的标识
+        /* 
+        目前我们的定时器的标识由全局变量timer保存
+        所有的正在执行的定时器都在这个变量中保存
+        */
+        // var timer;
+
+
+    </script>
+</head>
+
+<body>
+    <button id="btn01">点击按钮以后box1向右移动</button><br><br>
+    <button id="btn02">点击按钮以后box1向左移动</button><br><br>
+    <button id="btn03">点击按钮以后box2向右移动</button><br><br>
+    <button id="btn04">测试按钮</button><br><br>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div style="width: 0px;height: 500px;border: solid black 1px; left: 500px;position: absolute;top: 0px;"></div>
+
+</body>
+
+</html>
