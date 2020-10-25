@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+    <head>
+        <title>教师登录</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../CSS/layui.css">
+        <script src="/myfirstssm/js/jquery-1.11.3.min.js"></script>
+        
+        <style type="text/css">
+            #code {
+                font-family: Arial;
+                font-style: italic;
+                font-weight: bold;
+                border: 0;
+                letter-spacing: 2px;
+                color: blue;
+            }
+
+            html{
+                background-color:#FF5722;
+                
+            }
+            #top_centent{
+                margin: -50px auto;
+                width: 100%;
+                background-color: #FF5722;
+            }
+            #top_centent #time{
+                font-size: 20px;
+                
+            }
+            .button{
+                font-size: 20px;
+            }
+            .button:nth-child(2){
+                margin:0 30px;
+            }
+            td{
+                font-size: 20px;
+                font-weight: bold;
+            }
+            #content{
+                margin: 100px auto;
+            }
+            .form_table{
+                margin: 50px auto;
+            }
+            .form_table tr{
+                display: block;
+                margin: 50px auto;
+            }
+        </style> 
+        
+        <script>
+            //产生验证码  
+            window.onload = function() {
+                createCode();
+                var timeDiv = document.getElementById("time");
+                window.setInterval(function(){
+                    timeDiv.innerHTML = new Date().toLocaleString();
+                }, 1000);
+            };
+            var code; //在全局定义验证码  
+            function createCode() {
+                code = "";
+                var codeLength = 4; //验证码的长度  
+                var checkCode = document.getElementById("code");
+                var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+                    'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //随机数  
+                for(var i = 0; i < codeLength; i++) { //循环操作  
+                    var index = Math.floor(Math.random() * 36); //取得随机数的索引（0~35）  
+                    code += random[index]; //根据索引取得随机数加到code上  
+                }
+                checkCode.value = code; //把code值赋给验证码  
+            }
+            
+            function check(){
+            var inputCode = document.getElementById("ctl00_txtcode").value.toUpperCase();
+            var username = $("#username").val();
+            var password = $("#password").val();
+                if(username=="" || password==""||inputCode==""){
+                    alert("输入信息不能为空,请完善信息！");
+                    return false;
+                }else if(inputCode!=code){
+                    alert("验证码输入错误,请重新输入！");
+                    createCode(); //刷新验证码  
+                    document.getElementById("ctl00_txtcode").value = ""; //清空文本框
+                    return false;
+                }
+                return true;
+            }
+            
+        </script>
+        
+    </head>
+
+    <body>            
+       <br/><br/><br/><br/><br/>
+        <div id="wrap">
+             <div id="top_centent" >
+             
+                <div id="header">
+                    <!-- style="color:DodgerBlue;" -->
+                    <div id="leftheader" ></div>
+                        
+                        <div id="topheader" >
+                            <h1 id="title" style="text-align:center;" >
+                                <a href="#" style="text-decoration: none;color:black;font-size: 50px;color:cornsilk;">欢迎来到学生系统，请登录</a>
+                            </h1>
+                        </div>
+                        
+                     <div id="navigation"></div>
+                     
+                    <CENTER>
+                        <font color="red">
+                            <!--  <span id="message">${@}</span> -->
+                        </font>
+                    </CENTER>
+                        
+                </div>
+                
+                <div id="content">
+
+
+                    <!-- 指定表单要提交的地址 -->
+                    <form action="../专属页面/3.学生端-班级信息查看.html" autocomplete="off">
+                        <table cellpadding="0" cellspacing="40" border="0"
+                            class="form_table" align="center">
+                            <tr>
+                                <td valign="middle" align="right">
+                                    用   户   名:
+                                </td>
+                                <td valign="middle" align="left">
+                                    <input type="text"  name="username" id="username" />
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td valign="middle" align="right">
+                                    密         码:
+                                </td>
+                                <td valign="middle" align="left">
+                                    <input type="password" name="password" id="password" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" align="right">
+                                    验   证   码:
+                                </td>
+                                 
+                                <td valign="middle" align="left">
+                                    <input type="text" id="ctl00_txtcode" />
+                                </td>
+
+                                    <td valign="middle">
+                                        <input type="button" id="code" onclick="changeImg()"/>
+                                    </td>
+                                
+                        </table>
+                        
+                        <p style="text-align:center">
+                            <input type="submit" class="layui-btn layui-btn-normal" class="button" value="登陆" />
+                            <input class="layui-btn layui-btn-normal" type="button" class="button" value="注册" 
+                                                 >
+                            <input class="layui-btn layui-btn-normal" type="reset" name="reset" value="重置" style="font-size: 16px;"/>
+                        </p>
+                        <div>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <br/><br/><br/><br/><br/><br/><br/><br/>
+                            <div id="time" style="text-align:center"></div>
+                        </div>                                
+                    </form>
+                </div>
+            </div>
+         </div>
+    </body>
+</html>

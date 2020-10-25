@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="layui-v2.5.6/layui/css/layui.css">
+    <script type="text/javascript" src="JS/jquery-1.8.3.min.js"></script>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./CSS/index3.css">
+    <title>注册页面</title>
+    <script>
+        function register(){
+            alert("注册成功！点击返回登录界面！");
+            window.location.href="./03.一个精美的登录界面.html";
+        }
+        function register1(){
+            alert("有账号你还点我，服了你了！点下确定自己去登录吧");
+            window.location.href="./03.一个精美的登录界面.html";
+        }
+    </script>
+
+</head>
+<body>
+<form action="" method="post" id="form1">
+    <div class="registration-form">
+        <div class="registration-form-content">
+<!--            <div class="error-msg" id="error-msg">-->
+<!--                <i></i>-->
+<!--                <p class="error-msg-text">注册失败!</p>-->
+<!--            </div>-->
+            <div>
+                <div class="mobile-number clearfix" style="float:left;">
+                    <label for="username-input" class="labelk-tel">用户名</label>
+                    <input type="text" id="username-input" placeholder="请输入用户名" maxlength="8" name="username-input">
+                </div>
+                <div class="prompt">
+                    <div class="reg-mobile-prompt">
+                        <i class="tixing"></i>请输入正确的用户名
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div>
+                <div class="password-number clearfix" style="float:left;">
+                    <label for="password-input" class="labelk-tel">密码</label>
+                    <input type="password" id="password-input" placeholder="请输入密码" maxlength="11" name="password-input">
+                </div>
+                <div class="prompt">
+                    <div class="password-mobile-prompt">
+                        <i class="tixing"></i>8位以上且包含字母和数字
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div>
+                <div class="password-number clearfix" style="float:left;">
+                    <label for="spassword-input" class="labelk-tel">确认密码</label>
+                    <input type="password" id="spassword-input" placeholder="请输入确认密码" maxlength="11"
+                           name="spassword-input">
+                </div>
+                <div class="prompt">
+                    <div class="spassword-mobile-prompt">
+                        <i class="tixing"></i>必须与密码相同
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div>
+                <div class="depart-name clearfix" style="float:left;">
+                    <label for="depart-input" class="labelk-tel">院系名称</label>
+                    <input type="text" id="depart-input" placeholder="请输入院系名称" maxlength="11" name="depart-input">
+                </div>
+                <div class="prompt">
+                    <div class="departname-prompt">
+                        <i class="tixing"></i>必填项，请输入院系名称
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div>
+                <div class="teacher-name clearfix" style="float:left;">
+                    <label for="teacher-input" class="labelk-tel">教师姓名</label>
+                    <input type="text" id="teacher-input" placeholder="请输入教师姓名" maxlength="11" name="teacher-input">
+                </div>
+                <div class="prompt">
+                    <div class="teachername-prompt">
+                        <i class="tixing"></i>必填项，请输入教师姓名,至少两位汉字
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="button">
+                <button class="now-sign" id="registbtn" type="button"onclick="register();">立即注册</button>
+                <button class="sign" type="button" onclick="register1();">登录</button>
+            </div>
+
+
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

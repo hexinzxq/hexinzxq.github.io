@@ -1,0 +1,51 @@
+body {
+  height: 800px;
+  margin: 0;
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+form {
+  margin: 0;
+  padding: 0;
+}
+.registration-form .registration-form-content {
+  width: 550px;
+  height: 310px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  padding: 35px 50px 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 13px;
+}
+.registration-form .registration-form-content input {
+  margin-right: 30px;
+}
+.registration-form .registration-form-content .spassword-mobile-prompt,
+.registration-form .registration-form-content .password-mobile-prompt,
+.registration-form .registration-form-content .reg-mobile-prompt,
+.registration-form .registration-form-content .departname-prompt,
+.registration-form .registration-form-content .teachername-prompt {
+  line-height: 50px;
+}
+.registration-form .registration-form-content .labelk-tel {
+  display: inline-block;
+  width: 88px;
+  color: #333;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+}
+.registration-form .button {
+  text-align: center;
+}
+.registration-form .button .now-sign {
+  font-size: 15px;
+}
+.registration-form .button .sign {
+  margin-left: 20px;
+  font-size: 15px;
+}
+/*# sourceMappingURL=index3.css.map */

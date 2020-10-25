@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>layout 后台大布局 - Layui</title>
+  <link rel="stylesheet" href="./layui-v2.5.6/layui/css/layui.css">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo">戴尔扬州创新基地档案系统</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item"><a href="javascript:;">控制台</a></li>
+      <li class="layui-nav-item"><a href="javascript:;">校园风采</a></li>
+      <li class="layui-nav-item"><a href="javascript:;">用户</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">学院风采</a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">教师风貌</a></dd>
+          <dd><a href="javascript:;">学生风采</a></dd>
+          <dd><a href="javascript:;">活动形式</a></dd>
+        </dl>
+      </li>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="./img/WuTa_2019-07-21_18-28-31.jpg" class="layui-nav-img">
+          小爱同学
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">基本资料</a></dd>
+          <dd><a href="javascript:;">安全设置</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="./03.一个精美的登录界面.html">退出</a></li>
+    </ul>
+  </div>
+  
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;">学生管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">学生列表</a>
+            </dd>
+            <dd><a href="javascript:;">学生增加</a></dd>
+            <dd><a href="javascript:;">学生修改</a></dd>
+            <dd><a href="javascript:;">删除学生</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">教师管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">教师列表</a></dd>
+            <dd><a href="javascript:;">教师增加</a></dd>
+            <dd><a href="javascript:;">教师修改</a></dd>
+            <dd><a href="javascript:;">教师删除</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">成绩管理</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;">学生成绩</a></dd>
+              <dd><a href="javascript:;">教师成绩</a></dd>
+              <dd><a href="javascript:;">成绩分析</a></dd>
+              <dd><a href="javascript:;">成绩查询</a></dd>
+            </dl>
+          </li>
+        <li class="layui-nav-item"><a href="javascript:;">学院计划</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="layui-body">
+    <!-- 内容主体区域 -->
+    <div style="padding: 15px;">
+        学生列表
+        <table class="layui-table" lay-skin="line">
+            <colgroup>
+              <col width="150">
+              <col width="150">
+              <col width="200">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>民族</th>
+                <th>所属专业</th>
+                <th>所属班级</th>
+                <th>所在寝室</th>
+              </tr> 
+            </thead>
+            <tbody>
+              <tr>
+                <td>17310120101</td>
+                <td>舒怡</td>
+                <td>女</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>sad所</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+              <tr>
+                <td>17310120102</td>
+                <td>王集</td>
+                <td>男</td>
+                <td>汉</td>
+                <td>计算机科学与技术</td>
+                <td>计算机15110</td>
+                <td>D11-1001</td>
+              </tr>
+            </tbody>
+          </table> 
+    </div>
+  </div>
+  
+  <div class="layui-footer">
+    <!-- 底部固定区域 -->
+    ©2020版权所有
+  </div>
+</div>
+<script src="./layui-v2.5.6/layui/layui.js"></script>
+<script>
+//JavaScript代码区域
+layui.use('element', function(){
+  var element = layui.element;
+  
+});
+</script>
+</body>
+</html>
